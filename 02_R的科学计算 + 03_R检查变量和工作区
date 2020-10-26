@@ -1,0 +1,59 @@
+x <- c(1:1000)
+x <- 1/x
+x <- atan(x)
+x
+
+y <- x
+y <- tan(y)
+z <- y
+z <- 1/y
+z
+
+x <- c(1:1000)
+x == z
+all.equal(x,z)
+all.equal(1:2,2:3)
+isTRUE(all.equal(1:2,2:3))
+identical(x,z)
+all.equal(x,z,1)
+identical(1:1000,1:1000)
+
+true_and_missing <- c(TRUE,NA)
+false_and_missing <- c(FALSE,NA)
+mixed <- c(TRUE,FALSE,NA)
+any(true_and_missing)
+any(false_and_missing)
+any(mixed)
+all(true_and_missing)
+all(false_and_missing)
+all(mixed)
+
+
+
+class(Inf)
+class(NA)
+class(NaN)
+class("")
+typeof(Inf)
+typeof(NA)
+typeof(NaN)
+typeof("")
+mode(Inf)
+mode(NA)
+mode(NaN)
+mode("")
+storage.mode(Inf)
+storage.mode(NA)
+storage.mode(NaN)
+storage.mode("")
+
+a <- sample(c("dog","cat","hamster","goldfish"),1000,replace = TRUE)
+a[1:10]
+b <- factor(a)
+summary(b)
+
+peach <- 1
+potato <- 1
+tomato <- 1
+vegetable <- 1
+ls(pattern = 'a')
