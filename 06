@@ -1,0 +1,34 @@
+#6-1
+multiples_of_pi <- new.env()
+multiples_of_pi[['two_pi']] <- 2*pi
+multiples_of_pi$three_pi <- 3*pi
+assign('four_pi',4 * pi,multiples_of_pi)
+ls(multiples_of_pi)
+ls.str(multiples_of_pi)
+#6-2
+check <- function(x = 1){
+  if(is.finite(x)){
+    x <- x %% 2
+      if(x == 0) x <- TRUE
+      else x <- FALSE
+  }
+  else{
+    x <- NA
+  }
+  x
+}
+check(Inf)
+check(-Inf)
+check(0)
+check(1)
+#6-3
+a <- function(x = 1,y = 1){
+  x + y
+}
+f <- function(x){
+  list1 <- list('args' = pairlist(x),'body' = x)
+  list1
+}
+f(a(1,2))
+f(a(4,9))
+
