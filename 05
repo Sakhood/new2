@@ -1,0 +1,25 @@
+#5-1
+a <- list()
+for (i in c(0:9)){
+  t <- c()
+  for(j in c(0 : 9)){
+    num <- 10*i+j
+    if(sqrt(num) %% 1 == 0)
+    t <- c(t,num)
+  }
+  a <- c(a,list(t))
+}
+a
+#5-2
+iris
+fra <- data.frame(iris)
+colMeans(fra[,1:4])
+#5-3
+a <- beaver1
+b <- data.frame(id = 1)
+y <- cbind(a,b)
+c <- data.frame(id = 2)
+d <- beaver2
+x <- cbind(c,d)
+z <- rbind(y,x)
+z
