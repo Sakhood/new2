@@ -1,0 +1,13 @@
+gcd <- function(x = 3,y = 5){
+  while (x != y) {
+    if(x < y){
+      z <- x
+      x <- y 
+      y <- z
+    }
+    x <- x - y
+  }
+  x
+}
+q <- gcd()
+q
